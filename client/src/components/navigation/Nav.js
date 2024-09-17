@@ -5,6 +5,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import {
+  AboutUs,
   Blog,
   Buyers,
   Contact,
@@ -20,6 +21,7 @@ function Nav() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/sellers" element={<Sellers />} />
         <Route path="/buyers" element={<Buyers />} />
         <Route path="/listings" element={<Listings />} />
