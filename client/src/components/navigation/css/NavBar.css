@@ -30,12 +30,25 @@
     color: white;
     margin-left: 1em;
 }
-.nav-links {
+
+.nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: #2B2B2B;
     height: 2em;
+}
+
+#home {
+    width: 30%
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2B2B2B;
+    height: 2em;
+    width: 70%;
     margin-top: 0;
 }
 

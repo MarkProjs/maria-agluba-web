@@ -23,21 +23,21 @@ function NavBar() {
         </div>
       </section>
       <nav className="nav">
+        <p id="home">
+          <a href="/">Home</a>
+        </p>
         <ul className="nav-links">
-          <li id="home">
-            <a href="/">Home</a>
-          </li>
-          <li>
+          <li className="menu">
             <a href="/about">About Us</a>
           </li>
-          <li>Services</li>
-          <li>
+          <li className="menu">Services</li>
+          <li className="menu">
             <a href="/listings">Listings</a>
           </li>
-          <li>
+          <li className="menu">
             <a href="/blogs">Blogs</a>
           </li>
-          <li>
+          <li className="menu">
             <a href="/contact">Contact Us</a>
           </li>
         </ul>
