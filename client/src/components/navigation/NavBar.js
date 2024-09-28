@@ -1,44 +1,36 @@
 import React, { useState } from "react";
-import { SocialIcon } from "react-social-icons";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedinIcon from "@mui/icons-material/LinkedIn";
+import "./css/NavBar.css";
 
+/**
+ * A component that renders a navigation bar at the top of the page.
+ * This component contains social media links and a set of links to other pages.
+ * It also contains a dropdown menu for services.
+ */
 function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
   return (
     <div className="navbar">
-      <div className="socials">
-        <SocialIcon url="https://www.facebook.com/" target="_blank" />
-        <SocialIcon url="https://www.instagram.com/" target="_blank" />
-        <SocialIcon url="https://www.twitter.com/" target="_blank" />
-        <SocialIcon url="https://www.linkedin.com/" target="_blank" />
-        <button className="switch_lang">Francais</button>
-      </div>
+      <section className="socials">
+        <div className="logo">
+          <FacebookIcon className="social-icon" />
+          <InstagramIcon className="social-icon" />
+          <TwitterIcon className="social-icon" />
+          <LinkedinIcon className="social-icon" />
+          <button id="switch_lang">Francais</button>
+        </div>
+      </section>
       <nav className="nav">
         <ul className="nav-links">
-          <li>
+          <li id="home">
             <a href="/">Home</a>
           </li>
           <li>
             <a href="/about">About Us</a>
           </li>
-          <li className="dropdown" onMouseDown={toggle} onMouseLeave={toggle}>
-            <a href="#">Services</a>
-            {isOpen && (
-              <ul className="dropdown-menu">
-                <li>
-                  <a href="#">For Buyers</a>
-                </li>
-                <li>
-                  <a href="#">For Sellers</a>
-                </li>
-                <li>
-                  <a href="#">Directory of Professionals</a>
-                </li>
-              </ul>
-            )}
-          </li>
+          <li>Services</li>
           <li>
             <a href="/listings">Listings</a>
           </li>
